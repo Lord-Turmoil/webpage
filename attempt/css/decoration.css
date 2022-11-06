@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'STHUPO';
+    src: url("../res/STHUPO.ttf");
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.deactive {
+    opacity: 0%;
+}
+
+.active {
+    opacity: 100%;
+}
+
+/* Intro */
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'STHUPO';
+    z-index: 20;
+}
+
+#intro h2 {
+    font-size: 2em;
+    font-weight: lighter;
+    animation: glow 7s ease-in-out infinite;
+}
+
+
+/* Letter */
+#letter {
+    transition: 2s;
+    z-index: 5;
+    text-align: center;
+}
+
+#letter .box {
+    width: 90%;
+    margin: 0 5%;
+    top: 0px;
+    position: absolute;
+    transition: 2s;
+}
+
+#letter .box .item {
+    margin: 50px 0;
+    transition: 2s;
+    font-family: 'STHUPO';
+}
+
+#letter .box .lowlight {
+    opacity: 0%;
+}
+
+#letter .box .highlight {
+    opacity: 100%;
+}
+
+#letter .box .title {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+#letter .box p {
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+#letter .box img {
+    height: 4em;
+}
+
+
+/* Trick */
+
+#trick {
+    transition: 1.5s;
+}
+
+#trick .but {
+    font-family: 'STHUPO';
+    position: absolute;
+    font-size: 3.5em;
+    /* width: 2em; */
+    padding: 0.3em;
+    border-radius: 50%;
+    animation: glow 5s ease-in-out infinite;
+    box-shadow: 0px 0px 5px darkblue;
+}
+
+#yes {
+    left: 10%;
+    bottom: 25%;
+    z-index: 10;
+    background-image: linear-gradient(135deg, #F97794 10%, #623AA2 100%);
+}
+
+#no {
+    right: 10%;
+    bottom: 25%;
+    z-index: 10;
+    transition: 0.1s ease-out;
+    background-image: linear-gradient(135deg, #FD6585 10%, #0D25B9 100%);
+}
+
+/* Jump */
+#jump {
+    transition: 3s;
+    font-family: 'STHUPO';
+}
+
+#jump .title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 4em;
+    animation: glow 8s ease-in-out infinite;
+}
+
+#count {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 6em;
+}
+
+/* bgm */
+#track {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    vertical-align: middle;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    50% {
+        text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.9);
+        color: rgba(0, 0, 0, 1.0);
+    }
+
+    100% {
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+        color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}

@@ -1,0 +1,10 @@
+.header {
+    letter-spacing: 0.1em;
+    font-size: 2em;
+}
+
+.footer {
+    font-size: 22px;
+    text-align: center;
+    padding-top: 5px;
+}

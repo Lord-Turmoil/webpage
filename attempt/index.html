@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>......</title>
+    <link rel="icon" href="res/img/red_lotus.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/decoration.css">
+    <script src="js/detectmobilebrowser.js"></script>
+    <script>
+        if (check())
+            document.write('<link rel="stylesheet" href="css/layout.css">');
+        else
+            document.write('<link rel="stylesheet" href="css/mobile.css">');
+    </script>
+</head>
+
+<body class="no-select">
+    <div class="header">
+        <span>Hello there!</span>
+    </div>
+    <hr>
+
+    <!-- content -->
+    <div class="content">
+        <!-- Intro -->
+        <div class="full active" id="intro">
+            <div>
+                <h2>点击任意位置开始</h2>
+            </div>
+        </div>
+
+        <!-- Letter -->
+        <div class="full deactive" id="letter">
+            <div class="box">
+                <!-- placeholders -->
+                <div class="item lowlight">
+                    <h1>文字文字</h1>
+                </div>
+                <div class="item lowlight">
+                    <h1>文字文字</h1>
+                </div>
+                <div class="item lowlight">
+                    <h1>文字文字</h1>
+                </div>
+
+                <!-- actual words -->
+                <div class="item lowlight title">
+                    <h1>生日快乐</h1>
+                </div>
+                <div class="item lowlight">
+                    <p>珂萌：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                </div>
+                <div class="item lowlight">
+                    <p>......</p>
+                </div>
+                <div class="item lowlight">
+                    <p>这个页面本来趁着十月份事情少开始做的，虽然...(T^T)，不过还是让他上线了。</p>
+                </div>
+                <div class="item lowlight">
+                    <p>那段时间确实太兴奋了，什么都想跟你分享。</p>
+                </div>
+                <div class="item lowlight">
+                    <p>单身固然很自由，我也喜欢独来独往。</p>
+                </div>
+                <div class="item lowlight">
+                    <p>但是和你在一起是完全不一样的感觉。</p>
+                </div>
+                <div class="item lowlight">
+                    <p>记得之前背过，“两情若是久长时，又岂在朝朝暮暮。”</p>
+                </div>
+                <div class="item lowlight">
+                    <p><img src="res/img/curve.jpg" alt=""></p>
+                </div>
+                <div class="item lowlight">
+                    <p>我觉得这需要更多的磨合，而不应该就这样结束。</p>
+                </div>
+                <div class="item lowlight">
+                    <p>I am... a slow learner.</p>
+                </div>
+                <div class="item lowlight">
+                    <p>So... Could we have...<br>another chance? (&gt;_&lt;)</p>
+                </div>
+                <div class="item lowlight">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trick -->
+        <div class="deactive" id="trick">
+            <div class="but" id="yes">YES</div>
+            <div class="but" id="no">NO</div>
+        </div>
+
+        <!-- Jump -->
+        <div class="deactive" id="jump">
+            <div class="title">
+                <h2>I<br>KNEW<br>IT!</h2>
+            </div>
+            <div id="count">
+                <h3>3</h3>
+            </div>
+        </div>
+
+        <div id="track">
+            <img src="res/img/music.png" alt="music">
+        </div>
+
+    </div>
+
+    <!-- bgms -->
+    <audio src="res/audio/Across the Stars.m4a" loop id="bgm"></audio>
+
+    <!-- footer -->
+    <hr>
+    <div class="footer">
+        <!-- copyright -->
+        <div class="copyright">
+            <a href="http://www.tonys-studio.top"><span>Copyright &copy; Tony's Studio</span></a>
+        </div>
+    </div>
+
+    <script src="js/restrict.js"></script>
+    <script src="js/fire.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
