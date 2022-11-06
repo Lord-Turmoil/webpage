@@ -1,0 +1,19 @@
+.list {
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.list ul li {
+    padding: 5px 0px;
+}
+
+.list ul li {
+    height: 30px;
+    transition: 500ms;
+}
+
+.list ul li:hover {
+    height: 30px;
+    background-color: rgba(200, 200, 0, 0.8);
+}

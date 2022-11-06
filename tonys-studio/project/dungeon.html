@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- I HATE THIS TITLE. >:( -->
+    <title>个人作品展示 - Dungeon</title>
+    <link rel="icon" href="res/logo.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <script src="js/detectmobilebrowser.js"></script>
+    <script>
+        check('dungeon-mobile.html');
+    </script>
+    <style>
+        body {
+            background-image: url("res/dungeon/background.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="top">
+        <h1>Dungeon</h1>
+    </header>
+
+    <hr>
+    <div class="border">
+        <!-- Download -->
+        <div class="no-select sidebar out-right">
+            <div class="sidebar-box">
+                <a href="release/Dungeon 1.0.3.zip"><img src="res/download.png" alt="download"></a>
+            </div>
+            <div class="sidebar-box">
+                <a href="#top">TOP</a>
+            </div>
+            <div class="sidebar-box">
+                <a href="../project.html">BACK</a>
+            </div>
+            <div class="sidebar-box">
+                <a href="https://www.tapechat.net/uu/A61Y3W/3OBEBVAV" target="_blank">Q&A</a>
+            </div>
+        </div>
+        <!-- Screenshot -->
+        <div>
+            <div class="chapter">
+                <h2>- Screenshots -</h2>
+            </div>
+            <!-- swiper -->
+            <script src="js/swiper-bundle.min.js"></script>
+            <div class="slide no-select">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="res/dungeon/01.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/02.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/03.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/04.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/05.png" alt="screenshot"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <script>
+                    var mySwiper = new Swiper('.swiper', {
+                        direction: 'horizontal',
+                        loop: true,
+
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    })
+                </script>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div>
+            <div class="chapter">
+                <h2>- Description -</h2>
+            </div>
+            <div class="text">
+                <p>Greetings, young Adventurer!</p>
+                <p>You accidentally entered a dungeon in the sky, which is full of dangers. However, with your wisdom
+                    and courage, you may defeat the enemies and get out of there.</p>
+                <p>There are four levels of difficulty you can choose in the settings. But be warned, they may not
+                    be friendly! :)</p>
+            </div>
+        </div>
+
+        <!-- Version -->
+        <div>
+            <div class="chapter">
+                <h2>- Version -</h2>
+            </div>
+            <!-- v1.0.3 -->
+            <div class="section">
+                <h3>v1.0.3</h3>
+            </div>
+            <div class="part">
+                <h4>Overview:</h4>
+            </div>
+            <div class="text">
+                <p>Some minor changes.</p>
+            </div>
+            <div class="part">
+                <h4>Bugs:</h4>
+            </div>
+            <div class="text">
+                <p>Still, may crash for unknown reason. (Too rare.)</p>
+            </div>
+            <!-- v1.0.2 -->
+            <div class="section">
+                <h3>v1.0.2</h3>
+            </div>
+            <div class="part">
+                <h4>Overview:</h4>
+            </div>
+            <div class="text">
+                <p>Changed from Console Application to Windows Application.</p>
+                <p>Improved some details.</p>
+            </div>
+            <div class="part">
+                <h4>Bugs:</h4>
+            </div>
+            <div class="text">
+                <p>Unknown.</p>
+            </div>
+            <!-- v1.0.1 -->
+            <div class="section">
+                <h3>v1.0.1</h3>
+            </div>
+            <div class="part">
+                <h4>Overview:</h4>
+            </div>
+            <div class="text">
+                <p>Now there is a powerful Boss at the end of each chapter.</p>
+                <p>Some visual gliches are fixed.</p>
+                <p>Game balance improved.</p>
+                <p>Previous bugs are fixed.</p>
+                <p>Perhaps added more bugs. :(</p>
+            </div>
+            <div class="part">
+                <h4>Bugs:</h4>
+            </div>
+            <div class="text">
+                <p>Unknown.</p>
+            </div>
+            <!-- v1.0.0 -->
+            <div class="section">
+                <h3>v1.0.0</h3>
+            </div>
+            <div class="part">
+                <h4>Overview:</h4>
+            </div>
+            <div class="text">
+                <p>This is the first stable version. It is a complete refactoring of v0.1.0.</p>
+                <p>In this version, many design patterns are applied. Flexibility and expansibility are greatly
+                    improved.</p>
+            </div>
+            <div class="part">
+                <h4>Bugs:</h4>
+            </div>
+            <div class="text">
+                <p>1. Enemies may be a little stupid.</p>
+                <p>2. Weapon state may be skipped by swiching.</p>
+            </div>
+            <!-- v0.1.0 -->
+            <div class="section">
+                <h3>v0.1.0</h3>
+            </div>
+            <div class="part">
+                <h4>Overview:</h4>
+            </div>
+            <div class="text">
+                <p>This is still a demo in test, so it doesn't yet have its full potential. :(</p>
+            </div>
+            <div class="part">
+                <h4>Bugs:</h4>
+            </div>
+            <div class="text">
+                <p>1. Collision check often fails.</p>
+                <p>2. Hero makes unwanted moves after initialization.</p>
+                <p>3. Game may crash randomly. (Cannot be traced.)</p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+    <footer class="footer">
+        <div class="copyright">
+            <span>&nbsp;Copyright &copy; Tony's Studio 2022 </span>
+        </div>
+        <div class="record">
+            <span>
+                <a href="https://beian.miit.gov.cn"
+                    target="_blank">&nbsp;晋ICP备2022002858号-1</a></span>&nbsp;&nbsp;<span><a target="_blank"
+                    href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14080202000495"><img
+                        src="../res/img/record.png">晋公网安备 14080202000495号</a>
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>

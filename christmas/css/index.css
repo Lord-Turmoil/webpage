@@ -1,0 +1,145 @@
+.clearfix:before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    /* background-image: linear-gradient(90deg, #801080 15%, #000040, #400000 85%); */
+    background-color: #050505;
+}
+
+.background video {
+    z-index: -10;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+}
+
+.text {
+    opacity: 0%;
+}
+
+.text img {
+    position: absolute;
+    animation-name: breathAnim;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes breathAnim {
+    0% {
+        opacity: 40%;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1.1) rotate(10deg);
+    }
+}
+
+#button {
+    z-index: 5;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10% 10%;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: buttonAnim 1s infinite alternate;
+}
+
+@keyframes buttonAnim {
+    0% {
+        opacity: 30%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+#button h1 {
+    color: #efefef;
+}
+
+.footer {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #efefef;
+    font-family: 'BRISTONE';
+    white-space: nowrap;
+    animation: blinkAnim 4s infinite alternate-reverse;
+}
+
+@keyframes blinkAnim {
+    0% {
+        opacity: 0%;
+    }
+    20% {
+        opacity: 20%;
+    }
+    25% {
+        opacity: 10%;
+    }
+    35% {
+        opacity: 70%;
+    }
+    40% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    55% {
+        opacity: 20%;
+    }
+    65% {
+        opacity: 60%;
+    }
+    70% {
+        opacity: 10%;
+    }
+    75% {
+        opacity: 100%;
+    }
+    90% {
+        opacity: 80%;
+    }
+    95% {
+        opacity: 90%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKM & LZY 4 EVER</title>
+    <link rel="icon" href="res/img/red_lotus.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/background.css">
+    <script src="js/detectmobilebrowser.js"></script>
+    <script>
+        if (check())
+            document.write('<link rel="stylesheet" href="css/layout.css">');
+        else
+            document.write('<link rel="stylesheet" href="css/mobile.css">');
+    </script>
+    <style>
+         @font-face {
+            font-family: 'Harlow Solid';
+            src: url("res/HARLOWSI.TTF");
+        }
+    </style>
+</head>
+
+<body class="no-select">
+    <div class="header">
+        <span>== FOR&nbsp;&nbsp;EVER ==</span>
+    </div>
+    <hr>
+
+    <!-- content -->
+    <div class="content">
+        <!-- ckm -->
+        <div class="name ckm float left top">
+            <span>CKM</span>
+        </div>
+
+        <div class="float right top">
+            <button id="ckm-but"><img src="res/img/music.png" alt="music"></button>
+        </div>
+
+        <!-- days -->
+        <div class="day">
+            <div class="elapse"><span id="days" class="time"></span><span class="unit">&nbsp;Days</span></div>
+            <div class="origin">Since May 21, 2022</div>
+        </div>
+
+        <!-- lzy -->
+        <div class="name lzy float right bottom">
+            <span>LZY</span>
+        </div>
+
+        <div class="float left bottom">
+            <button id="lzy-but"><img src="res/img/music.png" alt="music"></button>
+        </div>
+    </div>
+
+    <!-- bgms -->
+    <audio src="res/audio/cbgm.mp3" loop volume="0.1" id="ckm-bgm"></audio>
+    <audio src="res/audio/tbgm.m4a" loop volume="0.1" id="lzy-bgm"></audio>
+
+    <!-- footer -->
+    <hr>
+    <div class="footer">
+        <!-- copyright -->
+        <div class="copyright">
+            <a href="http://www.tonys-studio.top"><span>Copyright &copy; Tony's Studio</span></a>
+        </div>
+    </div>
+
+    <script src="js/days.js"></script>
+    <script src="js/restrict.js"></script>
+    <script src="js/music.js"></script>
+</body>
+
+</html>

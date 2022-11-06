@@ -1,0 +1,65 @@
+.wrapper .container .content .text {
+    width: 80%;
+    margin: 10px auto;
+    text-align: left;
+    text-indent: 2em;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.wrapper .container .content .text p {
+    margin-top: 10px;
+}
+
+.wrapper .container .content audio {
+    width: 80%;
+}
+
+.wrapper .container .content .showcase a {
+    float: left;
+    margin: 40px 8%;
+    width: 34%;
+    border-radius: 30px;
+    overflow: hidden;
+    color: #eeeeee;
+    background-image: radial-gradient(circle at 50% 35%, rgba(128, 16, 128, 0.1) 20%, rgba(128, 16, 128, 1.0));
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .5);
+    transition: 500ms;
+    animation: appear 500ms ease 0ms 1 none;
+}
+
+@keyframes appear {
+    0% {
+        transform: translate(0, 40px);
+        opacity: 0.0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1.0;
+    }
+}
+
+.wrapper .container .content .showcase a:hover {
+    transform: translate(0, -20px) scale(1.1, 1.1);
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .container .content .showcase a .frame {
+    width: 70%;
+    margin: 10px auto;
+    border-radius: 40%;
+    overflow: hidden;
+}
+
+.wrapper .container .content .showcase a .frame img {
+    width: 100%;
+}
+
+.wrapper .container .content .showcase a span {
+    display: inline-block;
+    margin: 30px auto 50px auto;
+    line-height: 40px;
+    font-size: 35px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+}

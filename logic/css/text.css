@@ -1,0 +1,108 @@
+#input {
+    width: 100%;
+    text-align: center;
+}
+
+#input p {
+    padding: 8px;
+    font-size: large;
+    letter-spacing: 0.3ch;
+    background-color: #dfdfdf;
+    word-wrap: break-word;
+}
+
+#input p::after {
+    content: "|";
+    opacity: 0;
+}
+
+#output {
+    width: 100%;
+    text-align: center;
+    background-color: #dfdfdf;
+    padding-bottom: 20px;
+}
+
+#output hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#output .box {
+    margin-top: 10px;
+}
+
+#output .title {
+    text-align: center;
+}
+
+#output p {
+    line-height: 3ch;
+    letter-spacing: 0.3ch;
+    word-wrap: break-word;
+}
+
+#output p::after {
+    content: "|";
+    opacity: 0;
+}
+
+#output .block {
+    margin-top: 5px;
+    padding: 5px 0;
+}
+
+#truth table {
+    width: 90%;
+    margin: 0px auto;
+    border-collapse: collapse;
+    /* font-size: x-large; */
+}
+
+#truth th {
+    border-bottom: 1px solid #505050;
+    width: 10%;
+}
+
+#truth th:last-of-type {
+    border-left: 1px solid #505050;
+}
+
+#truth td:last-of-type {
+    border-left: 1px solid #505050;
+}
+
+.info {
+    padding: 10px 0;
+}
+
+.info .wrapper {
+    margin-top: 10px;
+}
+
+.info .wrapper .title {
+    text-align: center;
+}
+
+.info .wrapper .content {
+    display: flex;
+    justify-content: center;
+}
+
+.info .wrapper .text {
+    width: 85%;
+    text-align: justify;
+}
+
+.info .wrapper .text p {
+    text-indent: 2ch;
+    margin-top: 1ch;
+}
+
+.info .wrapper .text ul li {
+    margin-left: 4ch;
+}
+
+.list-auto li {
+    list-style: auto;
+}

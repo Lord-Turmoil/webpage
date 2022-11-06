@@ -1,0 +1,9 @@
+.refraction {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 60%;
+    z-index: 20;
+    background-color: transparent;
+}

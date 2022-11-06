@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- I HATE THIS TITLE. >:( -->
+    <title>个人作品展示 - Jumper</title>
+    <link rel="icon" href="res/logo.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/list.css">
+    <script src="js/detectmobilebrowser.js"></script>
+    <script>
+        check('../mobile.html');
+    </script>
+    <style>
+        body {
+            background-image: url("res/jumper/grid.png");
+            background-size: auto;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="top">
+        <h1>Tony's Jumper</h1>
+    </header>
+
+    <hr>
+    <div class="border">
+        <!-- Download -->
+        <div class="no-select sidebar out-right" style="background-color: rgb(0, 200, 0);">
+            <div class="sidebar-box">
+                <a href="#top">TOP</a>
+            </div>
+            <div class="sidebar-box">
+                <a href="../project.html">BACK</a>
+            </div>
+        </div>
+
+        <!-- Download -->
+        <div>
+            <div class="chapter">
+                <h2>- Download -</h2>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="release/TonysJumper.zip">Tony's Jumper Original</a></li>
+                    <li><a href="release/Jumper.exe">Tony's Jumper Remastered</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Screenshot -->
+        <div>
+            <div class="chapter">
+                <h2>- Screenshots -</h2>
+            </div>
+            <!-- swiper -->
+            <script src="js/swiper-bundle.min.js"></script>
+            <div class="slide no-select">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="res/jumper/01.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/jumper/02.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/jumper/03.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/jumper/04.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/jumper/05.png" alt="screenshot"></div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+                <script>
+                    var mySwiper = new Swiper('.swiper', {
+                        direction: 'horizontal',
+                        loop: true,
+
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    })
+                </script>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div>
+            <div class="chapter">
+                <h2>- Description -</h2>
+            </div>
+            <div class="text">
+                <p>The idea of making such a game originated from the popular mobile game - Doodle Jump, developed by
+                    Lima Sky. It's quite fun but some how not available now. So I made it to practice my C++ at the same
+                    time.</p>
+                <p>Since I didn't use any image resources, so the game doesn't have pretty visual effects. However,
+                    recently, I learnt Flash a step further and get to know ActionScript 3.0, thus I remastered it. You
+                    can easily tell them apart, right? :)</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <footer class="footer">
+        <div class="copyright">
+            <span>&nbsp;Copyright &copy; Tony's Studio 2022 </span>
+        </div>
+        <div class="record">
+            <span>
+                <a href="https://beian.miit.gov.cn"
+                    target="_blank">&nbsp;晋ICP备2022002858号-1</a></span>&nbsp;&nbsp;<span><a target="_blank"
+                    href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14080202000495"><img
+                        src="../res/img/record.png">晋公网安备 14080202000495号</a>
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>

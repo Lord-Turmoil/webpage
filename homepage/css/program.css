@@ -1,0 +1,47 @@
+.wrapper .container .content .text {
+    width: 80%;
+    margin: 10px auto;
+    text-align: left;
+    text-indent: 2em;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.wrapper .container .content .text p {
+    margin-top: 10px;
+}
+
+.wrapper .container .content .text a {
+    color: #000080;
+}
+
+.wrapper .container .content .text a:hover {
+    color: #0000F0;
+}
+
+.wrapper .container .content ul {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.wrapper .container .content ul li {
+    margin: 10px auto;
+    height: 40px;
+    line-height: 30px;
+}
+
+.wrapper .container .content ul li a {
+    display: inline-block;
+    padding: 0 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5);
+    transition: 300ms;
+}
+
+.wrapper .container .content ul li a:hover {
+    display: inline-block;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1.0);
+    border-bottom: 1px solid rgba(0, 0, 64, 0.3);
+}

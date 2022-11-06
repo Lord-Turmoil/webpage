@@ -1,0 +1,15 @@
+.slide {
+    text-align: center;
+}
+
+.swiper {
+    margin-top: 30px;
+    width: 500px;
+    height: 250px;
+    text-align: center;
+}
+
+.swiper .swiper-wrapper .swiper-slide img {
+    height: 240px;
+    /* border: 5px solid darkblue; */
+}

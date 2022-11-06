@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- I HATE THIS TITLE. >:[ -->
+    <title>个人作品展示 - Projects</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/program.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="icon" href="res/img/logo.ico" type="image/x-icon" />
+    <script src="js/detectmobilebrowser.js"></script>
+    <script src="js/restrict.js"></script>
+    <script>
+        check('mobile.html');
+    </script>
+    <script src="js/chart.js"></script>
+</head>
+
+<body>
+    <!-- header of the page -->
+    <div class="header" id="top">
+        <h1>Tony's Studio</h1>
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+        <marquee behavior="scroll" direction="left">
+            01001001 00100000 01101100 01101001 01101011 01100101 00100000 01000011 01001011 01001101
+        </marquee>
+    </div>
+    <div class="wrapper">
+        <!-- main part of the page -->
+        <div class="container clearfix">
+            <!-- the contents -->
+            <div class="nav">
+                <div class="portrait">
+                    <div class="frame">
+                        <img src="res/img/portrait.jpg" alt="Portrait">
+                    </div>
+                </div>
+                <!-- Brief info -->
+                <div class="info">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <td>Tony</td>
+                        </tr>
+                        <tr>
+                            <th>Birthday</th>
+                            <td>2003.6.28</td>
+                        </tr>
+                        <tr>
+                            <th>Nationality</th>
+                            <td>China</td>
+                        </tr>
+                        <tr>
+                            <th>Home</th>
+                            <td>Shanxi</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="contents">
+                    <h4>Contents</h4>
+                    <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="collection.html">Collections</a></li>
+                        <li><a href="https://www.luogu.com.cn/blog/Turmoil/" target="_blank">My Blog</a></li>
+                        <li><a href="https://github.com/Lord-Turmoil?tab=repositories" target="_blank">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- content of the page -->
+            <div class="content clearfix">
+                <h2>Programming</h2>
+                <hr>
+                <div class="showcase clearfix">
+                    <div class="text">
+                        <p>I start to learn programming after Junior High. I really enjoy it, but I don't have much time
+                            to do it now :-(. In spare time, I'd love to write something. And thanks for <a
+                                href="https://easyx.cn/" target="_blank">EasyX</a>, which
+                            provided me with an excellent platform to enjoy coding.</p>
+                        <p>If you'd like, I can provide you with the complete source code of my projects. You can
+                            contact me via email, and I had put a quick link in the sidebar. However, NO commercial use,
+                            please. What's more, don't use them directly in
+                            your projects, thank you. :)</p>
+                    </div>
+                    <div>
+                        <canvas id="chart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+
+                <!-- projects -->
+                <h2>Projects</h2>
+                <hr>
+                <script src="js/swiper-bundle.min.js"></script>
+                <div class="intro-wrapper no-select">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="intro">
+                                    <h1>Dungeon</h1>
+                                    <p>A Roguelike game similar to Soul Knight. The best one so far.</p>
+                                    <a href="project/dungeon.html">More</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="intro">
+                                    <h1>Tony's Jumper</h1>
+                                    <p>Originated from the classic game Doodle Jump. The original version is a little
+                                        rough, but it is prettier after remastered with Flash.</p>
+                                    <a href="project/jumper.html">More</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="intro">
+                                    <h1>Tony's Snake 3</h1>
+                                    <p>The third generation of Tony's Snake. This version uses EasyX for better graphics
+                                        effects. Unfortunatly, due to my lack of experience, there are critical bugs in
+                                        this one. :(</p>
+                                    <a href="project/release/TS3.zip">Download</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="intro">
+                                    <h1>Tony's Snake 2 Remastered</h1>
+                                    <p>The second generation of Tony's Snake, remastered with colored characters. This
+                                        one simply uses console to display the game. However, it is my best console game
+                                        so far.</p>
+                                    <a href="project/release/TS2Remastered.zip">Download</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="intro">
+                                    <h1>Encryptor</h1>
+                                    <p>An encryptor using Tiny Encryption Algorithm. Easy to use. :)</p>
+                                    <a href="project/release/encryptor.exe">Download</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="intro">
+                                    <h1>Tony's Bomb Field</h1>
+                                    <p>Ahoy! The one and only original game developed by Tony's Studio. Although... it
+                                        is quite shabby. :(</p>
+                                    <a href="project/release/TBF.zip">Download</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <script>
+                        var mySwiper = new Swiper('.swiper', {
+                            direction: 'horizontal',
+                            loop: true,
+
+                            pagination: {
+                                el: '.swiper-pagination',
+                            },
+
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                        })
+                    </script>
+                </div>
+            </div>
+
+            <!-- back to top and contack me -->
+            <div class="sidebar">
+                <a href="#top">Top</a>
+                <a href="index.html">Back</a>
+                <a href="https://www.tapechat.net/uu/A61Y3W/3OBEBVAV" target="_blank">Tape</a>
+                <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=tony-turmoil@qq.com "
+                    target="_blank " rel="nofollow ">
+                    <img src="res/img/message.png " title="Email Me ">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer of the page -->
+    <div class="footer clearfix">
+    </div>
+
+    <!-- JabaScript (>_<) -->
+    <script src="js/common.js"></script>
+    <script src="js/program.js"></script>
+    <script src="js/links.js"></script>
+</body>
+
+</html>

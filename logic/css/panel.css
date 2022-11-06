@@ -1,0 +1,35 @@
+.panel {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+}
+
+.panel .operator,
+.value {
+    flex: 1;
+    margin: 0 3px;
+}
+
+.panel ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.panel ul li {
+    flex: 1;
+}
+
+.panel ul li button {
+    width: 100%;
+    padding: 5px;
+    line-height: 4ch;
+    font-size: large;
+}
+
+.panel ul li .command {
+    background-color: #dfdfdf;
+}
+
+.panel ul li .command:hover {
+    background-color: #cfcfcf;
+}

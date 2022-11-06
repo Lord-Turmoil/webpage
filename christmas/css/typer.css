@@ -1,0 +1,15 @@
+#typer::after {
+    content: "|";
+    display: inline-block;
+    vertical-align: top;
+    animation: flickerAnim 1s infinite;
+}
+
+@keyframes flickerAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

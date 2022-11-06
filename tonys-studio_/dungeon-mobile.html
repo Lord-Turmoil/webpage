@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon</title>
+
+    <link rel="icon" href="res/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <style>
+        .slide {
+            text-align: center;
+        }
+        
+        .swiper {
+            margin-top: 30px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .swiper .swiper-wrapper .swiper-slide img {
+            width: 100%;
+        }
+        
+        p {
+            text-indent: 2ch;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="top">
+        <h1>Dungeon</h1>
+    </header>
+
+    <hr>
+
+    <div class="border">
+        <span><b>Warning: </b></span><br>
+        <p>Please open on PC to download the game.</p>
+
+        <div class="no-select sidebar out-right">
+            <div class="sidebar-box">
+                <a href="#top">TOP</a>
+            </div>
+            <div class="sidebar-box">
+                <a href="index.html">BACK</a>
+            </div>
+        </div>
+
+        <!-- Screenshot -->
+        <div>
+            <div class="chapter">
+                <h2>- Screenshots -</h2>
+            </div>
+            <!-- swiper -->
+            <script src="js/swiper-bundle.min.js"></script>
+            <div class="slide no-select">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="res/dungeon/10.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/11.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/20.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/21.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/22.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/23.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/24.png" alt="screenshot"></div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+                <script>
+                    var mySwiper = new Swiper('.swiper', {
+                        direction: 'horizontal',
+                        loop: true,
+
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    })
+                </script>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div>
+            <div class="chapter">
+                <h2>- Description -</h2>
+            </div>
+            <div class="text">
+                <p>Greetings, young adventurer!</p>
+                <p>You accidentally entered a dungeon in the sky, which is full of dangers. However, with the three weapons you possess, you may defeat the enemies and get out of there.</p>
+                <p>There are three levels of difficulty you can choose in the options. But be warned, they may outnumber you! :)</p>
+            </div>
+        </div>
+
+        <!-- Version -->
+        <div>
+            <div class="chapter">
+                <h2>- Version -</h2>
+            </div>
+            <div class="section">
+                <h3>v0.1.0</h3>
+            </div>
+            <div class="part">
+                <h4>Overview:</h4>
+            </div>
+            <div class="text">
+                <p>This is still a demo in test, so it doesn't yet have its full potential. :(</p>
+                <p></p>
+            </div>
+            <div class="part">
+                <h4>Bugs:</h4>
+            </div>
+            <div class="text">
+                <p>1. Collision check often fails.</p>
+                <p>2. Hero makes unwanted moves after initialization.</p>
+                <p>3. Game may crash randomly. (Cannot be traced.)</p>
+                <p>4. Boss may be stuck.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+    <footer class="footer">
+        <div class="comment">
+            <span>&nbsp;&nbsp;Copyright &copy; 2022 New Desire Studios</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;E-mail: tony-turmoil@qq.com</span>
+        </div>
+        <div class="comment">
+            <span>&nbsp;&nbsp;record</span>
+        </div>
+    </footer>
+
+    <script src="js/restrict.js">
+    </script>
+</body>
+
+</html>

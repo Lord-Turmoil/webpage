@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Calculator</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <header>
+        <h1>Logic Calculator</h1>
+    </header>
+    <hr>
+
+    <div class="banner">
+        <marquee behavior="scroll" direction="left">
+            <p>Welcome to the Logic Calculator for discrete mathematics!</p>
+        </marquee>
+    </div>
+    <hr>
+
+    <div id="input">
+        <h2>Please Enter The Formula</h2>
+        <p></p>
+    </div>
+    <hr>
+
+    <div class="panel">
+        <div class="operator">
+            <ul>
+                <li><button id="op-0">¬</button></li>
+                <li><button id="op-1">∧</button></li>
+                <li><button id="op-2">∨</button></li>
+            </ul>
+            <ul>
+                <li><button id="op-3">⊕</button></li>
+                <li><button id="op-4">→</button></li>
+                <li><button id="op-5">↔</button></li>
+            </ul>
+            <ul>
+                <li><button id="op-7">(</button></li>
+                <li><button id="op-8">)</button></li>
+                <li><button id="op-6">←</button></li>
+            </ul>
+        </div>
+        <div class="value">
+            <ul>
+                <li><button id="var-0">p</button></li>
+                <li><button id="var-1">q</button></li>
+                <li><button id="var-2">r</button></li>
+            </ul>
+            <ul>
+                <li><button id="var-3">s</button></li>
+                <li><button id="con-0">0</button></li>
+                <li><button id="con-1">1</button></li>
+            </ul>
+            <ul>
+                <li><button class="command" id="cmd-reset">C</button></li>
+                <li><button class="command" id="cmd-delete">Del</button></li>
+                <li><button class="command" id="cmd-confirm">=</button></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+
+    <div id="output">
+        <div class="title">
+            <h2>Results</h2>
+        </div>
+
+        <div class="box" id="empty">
+            <h3>Awaiting Orders...</h3>
+        </div>
+
+        <div class="box" id="error" style="display: none;">
+            <h3>Invalid Input! :(</h3>
+        </div>
+
+        <div class="box" id="result" style="display: none;">
+            <hr>
+            <div class="block">
+                <div class="title">
+                    <h4>Polish Notation</h4>
+                </div>
+                <div id="polish">
+                    <p></p>
+                </div>
+            </div>
+
+            <hr>
+            <div class="block">
+                <div class="title">
+                    <h4>Principal Disjunctive Normal Form</h4>
+                </div>
+                <div id="disj">
+                    <p></p>
+                </div>
+            </div>
+
+            <hr>
+            <div class="block">
+                <div class="title">
+                    <h4>Principal Conjunctive Normal Form</h4>
+                </div>
+                <div id="conj">
+                    <p></p>
+                </div>
+            </div>
+
+            <hr>
+            <div class="block">
+                <div class="title">
+                    <h4>Truth Table</h4>
+                </div>
+                <div id="truth">
+                    <table>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+    <div class="info">
+        <div class="wrapper">
+            <div class="title">
+                <h2>Instructions</h2>
+            </div>
+            <div class="content">
+                <div class="text">
+                    <p>This is a logic calculator for discrete mathematics. You can just simply press the buttons to enter the formula, and Confirm, then the results will be shown below. Currently, for the ease of use and implementation, it doesn't support
+                        text input.
+                    </p>
+                    <p>Supported functions are:</p>
+                    <ul class="list-auto">
+                        <li>Infix expression to polish notation.</li>
+                        <li>Principal disjunctive/conjunctive normal form.</li>
+                        <li>Truth table.</li>
+                    </ul>
+                    <p>Bug List:</p>
+                    <ul class="list-auto">
+                        <li>Due to the infix to prefix process, it may take some illegal input as legal. (e.g. pq∧, pqr∧∨)</li>
+                    </ul>
+                    <p>To redicule me: <a href="https://www.tapechat.net/uu/A61Y3W/3OBEBVAV">RIDICULE</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="title">
+                <h2>Update History</h2>
+            </div>
+            <div class="content">
+                <div class="text">
+                    <p>2022/04/04: Firsly released.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+    <footer class="clearfix">
+        <div class="copyright">
+            <span>Copyright © Tony's Studio 2022</span>
+        </div>
+        <!-- <div class="record">
+            <span><a href="https://beian.miit.gov.cn" target="_blank">晋ICP备2022002858号-1</a></span>
+            <br>
+            <span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14080202000495"><img src="res/record.png">晋公网安备 14080202000495号</a></span>
+        </div> -->
+    </footer>
+
+    <script src="js/copyright.js"></script>
+    <script src="js/logic.js"></script>
+</body>
+
+</html>

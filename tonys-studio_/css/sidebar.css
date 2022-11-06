@@ -1,0 +1,42 @@
+.sidebar {
+    position: sticky;
+    float: right;
+    top: 10%;
+    text-align: center;
+    vertical-align: bottom;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.out-right {
+    float: right;
+    transform: translate(120%, 0%);
+}
+
+.out-left {
+    float: left;
+    transform: translate(-120%, 0%);
+}
+
+.sidebar img {
+    width: 100%;
+}
+
+.sidebar .sidebar-box {
+    padding: 10px;
+    line-height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    opacity: 70%;
+    transition: 500ms;
+}
+
+.sidebar .sidebar-box a {
+    font-size: 30px;
+    color: black;
+}
+
+.sidebar .sidebar-box:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 100%;
+}

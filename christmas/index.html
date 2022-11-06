@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas</title>
+    <link rel="icon" href="res/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/typer.css">
+    <style>
+        @font-face {
+            font-family: 'BRISTONE';
+            src: url("res/Bristone.ttf");
+        }
+    </style>
+</head>
+
+<body>
+    <!-- BGM -->
+    <audio src="res/The First Noel.m4a" loop id="bgm"></audio>
+
+    <!-- background -->
+    <div class="background">
+        <video id="video" autoplay muted loop>
+        <source src="res/tree.mp4">
+    </video>
+    </div>
+
+    <div id="button">
+        <h1>CLICK ME</h1>
+    </div>
+
+    <div class="text">
+        <img src="res/merry.png" alt="Merry">
+        <img src="res/christmas.png" alt="Christmas">
+    </div>
+
+    <div class="footer">
+        <div id="typer">
+            <p data-text="TONY'S STUDIO PRESENT"></p>
+        </div>
+    </div>
+
+    <script src="js/effect.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/typer.js"></script>
+</body>
+
+</html>

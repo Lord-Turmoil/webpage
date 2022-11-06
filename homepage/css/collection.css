@@ -1,0 +1,70 @@
+.wrapper .container .content .showcase .set {
+    width: 80%;
+    height: 70px;
+    margin: 40px auto;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: rgba(128, 16, 128, 0.2);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .5);
+}
+
+.wrapper .container .content .showcase .set .toggle h3 {
+    float: left;
+    margin: 10px 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+}
+
+.wrapper .container .content .showcase .set .toggle button {
+    float: right;
+    width: 100px;
+    height: 40px;
+    margin: 15px 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    opacity: 0.5;
+    background-color: rgba(128, 16, 128, 0.5);
+    transition: 100ms;
+}
+
+.wrapper .container .content .showcase .set button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    background-color: rgba(128, 16, 128, 0.8);
+}
+
+.wrapper .container .content .showcase .set hr {
+    width: 80%;
+    height: 2px;
+    margin: 5px auto;
+    border: none;
+    background-image: linear-gradient(90deg, rgba(64, 0, 64, 0.0), rgba(64, 0, 64, 1) 60%, rgba(64, 0, 64, 0.0));
+}
+
+.wrapper .container .content .showcase .set ul li {
+    display: inline-block;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px auto;
+    font-size: 25px;
+}
+
+.wrapper .container .content .showcase .set ul li a {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    font-size: 25px;
+    color: #555555;
+    transition: 100ms;
+}
+
+.wrapper .container .content .showcase .set ul li a:hover {
+    font-size: 30px;
+    color: #400040;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
+}

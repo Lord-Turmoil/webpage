@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Consolas';
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 2000% 400%;
+    background-position: 0 0;
+    animation-name: gradientAnim;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes gradientAnim {
+    0% {
+        background-image: linear-gradient(60deg, #801080 20%, #000040, #400000 80%);
+        background-position: 0% 0%;
+    }
+    50% {
+        background-image: linear-gradient(120deg, #801080 20%, #000040, #400000 80%);
+        background-position: 100% 0%;
+    }
+    100% {
+        background-image: linear-gradient(60deg, #801080 20%, #000040, #400000 80%);
+        background-position: 0% 0%;
+    }
+}
+
+.clearfix:before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* content wrapper */
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* navigator */
+
+.wrapper .nav {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 20%;
+    text-align: center;
+    background-image: linear-gradient(90deg, #801080 15%, #000040, #400000 85%);
+    box-shadow: 0px 5px 10px 5px rgba(200, 200, 200, 0.8);
+    z-index: 10;
+    overflow: hidden;
+}
+
+.wrapper .nav ul li {
+    float: left;
+    padding: 1rem 1rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    color: #dfdfdf;
+    cursor: pointer;
+}
+
+.wrapper .nav ul li:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 10px #ffffff;
+}
+
+
+/* content */
+
+.wrapper .content {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 400%;
+    z-index: 0;
+}
+
+.wrapper .content .box {
+    width: 100%;
+    height: 25%;
+}
+
+.wrapper .content .box .cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper .content .box .cover .title h1 {
+    font-size: 8rem;
+    color: rgba(200, 200, 200, 0.8);
+    text-shadow: 0px 0px 1rem rgba(255, 255, 255, 0.8);
+    animation-name: breathAnim;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation: appearAnim 2s ease 0s 1 none;
+}
+
+@keyframes breathAnim {
+    0% {
+        text-shadow: 0px 0px 0.8rem rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.8);
+        text-shadow: 0px 0px 2.5rem rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0px 0px 0.1rem rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes appearAnim {
+    0% {
+        opacity: 0.0;
+    }
+    20% {
+        opacity: 0.0;
+        transform: translate(0, 40px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1.0;
+    }
+}
+
+
+/* introduction */
+
+.wrapper .content .box .intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10% 0;
+}
+
+.wrapper .content .box .intro .title {
+    display: inline-block;
+    width: 20%;
+    padding-top: 10%;
+    text-align: right;
+    padding-right: 1rem;
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.wrapper .content .box .intro .title h2 {
+    display: inline-block;
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.wrapper .content .box .intro .text {
+    width: 70%;
+    padding-left: 1rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    color: #efefef;
+}
+
+.wrapper .content .box .intro .text p {
+    padding-bottom: 1rem;
+}
+
+.wrapper .content .box .intro .text a {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+}
+
+.wrapper .content .box .intro .text a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* projects */
+
+.wrapper .content .box .proj {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10% 0;
+}
+
+.wrapper .content .box .proj .title {
+    display: inline-block;
+    width: 20%;
+    padding-top: 10%;
+    text-align: right;
+    padding-right: 1rem;
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.wrapper .content .box .proj .title h2 {
+    display: inline-block;
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.wrapper .content .box .proj .text {
+    width: 70%;
+    padding-left: 1rem;
+    font-size: 2rem;
+    color: #efefef;
+}
+
+.wrapper .content .box .proj .text .showcase {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.wrapper .content .box .proj .text .showcase a {
+    color: #efefef;
+}
+
+.wrapper .content .box .proj .text .showcase .item {
+    float: left;
+    width: 40%;
+    height: 15%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    /* background-color: rgba(250, 200, 0, 0.9); */
+    text-shadow: 0px 0px 2rem rgba(0, 0, 64, 0.8);
+    border-radius: 10px;
+    transition: 200ms;
+    text-align: center;
+    cursor: pointer;
+    background-size: 300% 100%;
+    background-image: linear-gradient(60deg, rgba(250, 200, 0, 0.9) 45%, rgba(255, 255, 200, 0.9) 50%, rgba(250, 200, 0, 0.9) 55%);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    animation-name: highlightAnim;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+@keyframes highlightAnim {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.wrapper .content .box .proj .text .showcase .item:hover {
+    transform: scale(1.1);
+}
+
+.wrapper .content .box .proj .text .showcase .item h4 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.wrapper .content .box .proj .text .showcase .item h5 {
+    font-size: 1.5rem;
+}
+
+
+/* button */
+
+.wrapper .button {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(90deg, #801080 15%, #000040, #400000 85%);
+    box-shadow: 0px -5px 10px 5px rgba(200, 200, 200, 0.8);
+    z-index: 10;
+}
+
+.wrapper .button span {
+    display: inline-block;
+    width: 100%;
+    max-height: 20%;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    color: #efefef;
+    cursor: pointer;
+}
+
+.wrapper .button span:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 10px #ffffff;
+}

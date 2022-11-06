@@ -1,0 +1,18 @@
+.wrapper .container .content h2 {
+    margin: 20px auto;
+    font-size: 60px;
+    letter-spacing: 0.1em;
+}
+
+.wrapper .container .content .text {
+    width: 80%;
+    margin: 20px auto;
+    text-align: left;
+    text-indent: 2em;
+    line-height: 35px;
+    font-size: 25px;
+}
+
+.wrapper .container .content .text p {
+    margin: 40px auto;
+}
