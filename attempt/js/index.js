@@ -89,6 +89,9 @@ function showConfirm() {
     letterDiv.onclick = null;
     trickDiv.classList.remove("deactive");
     trickDiv.classList.add("active");
+    noButton.onmouseenter = function () {
+        jump();
+    }
     noButton.onclick = function () {
         jump();
     }
