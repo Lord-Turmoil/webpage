@@ -5,7 +5,7 @@ var trickDiv = document.getElementById("trick");
 var jumpDiv = document.getElementById("jump");
 
 // Letter
-const SCROLL_DELAY = 3000;
+const SCROLL_DELAY = 4000;
 const MARGIN = 50;
 const BEGIN_ID = 2;
 var itemBox = letterDiv.getElementsByClassName("box")[0];
@@ -196,7 +196,7 @@ function countdown() {
 }
 
 function redirect() {
-    window.location.href = "http://www.tonys-studio.top";
+    window.location.href = "http://www.tonys-studio.top:90";
 }
 
 var bgm = document.getElementById("bgm");

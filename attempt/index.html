@@ -16,10 +16,14 @@
             document.write('<link rel="stylesheet" href="css/layout.css">');
         else
             document.write('<link rel="stylesheet" href="css/mobile.css">');
+        function init() {
+            var contentDiv = document.getElementsByClassName("content")[0];
+            contentDiv.style.opacity = 100;
+        }
     </script>
 </head>
 
-<body class="no-select">
+<body class="no-select" onload="init();">
     <div class="header">
         <span>Hello there!</span>
     </div>
@@ -65,28 +69,37 @@
                     <p>那段时间确实太兴奋了，什么都想跟你分享。</p>
                 </div>
                 <div class="item lowlight">
+                    <p>是应该有更多自己的空间，抱歉。</p>
+                </div>
+                <div class="item lowlight">
+                    <p>记得之前背过，“两情若是久长时，又岂在朝朝暮暮。”</p>
+                </div>
+                <div class="item lowlight">
                     <p>单身固然很自由，我也喜欢独来独往。</p>
                 </div>
                 <div class="item lowlight">
                     <p>但是和你在一起是完全不一样的感觉。</p>
                 </div>
                 <div class="item lowlight">
-                    <p>记得之前背过，“两情若是久长时，又岂在朝朝暮暮。”</p>
-                </div>
-                <div class="item lowlight">
                     <p><img src="res/img/curve.jpg" alt=""></p>
                 </div>
                 <div class="item lowlight">
-                    <p>我觉得这需要更多的磨合，而不应该就这样结束。</p>
+                    <p>我觉得这也是一个学习的过程，</p>
+                </div>
+                <div class="item lowlight">
+                    <p>需要更长时间的磨合，</p>
+                </div>
+                <div class="item lowlight">
+                    <p>而不应该就这样结束。</p>
+                </div>
+                <div class="item lowlight">
+                    <p></p>
                 </div>
                 <div class="item lowlight">
                     <p>I am... a slow learner.</p>
                 </div>
                 <div class="item lowlight">
                     <p>So... Could we have...<br>another chance? (&gt;_&lt;)</p>
-                </div>
-                <div class="item lowlight">
-                    <p></p>
                 </div>
             </div>
         </div>
