@@ -1,6 +1,6 @@
 .sidebar {
     position: sticky;
-    float: right;
+    /* float: right; */
     top: 10%;
     text-align: center;
     vertical-align: bottom;

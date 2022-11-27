@@ -39,19 +39,23 @@
     <hr>
 
     <div class="border">
+        <p><i>For Turmoil, who is with me all the time.</i></p>
         <span><b>Warning: </b></span><br>
         <p>Please open on PC to download the game.</p>
         <p>To redicule me: <a href="https://www.tapechat.net/uu/A61Y3W/3OBEBVAV" target="_blank">REDICULE</a></p>
+        <p>Star Dungeon on <a href="https://gitee.com/tonys-studio/dungeon" target="_blank">Gitee</a></p>
 
         <!-- Screenshot -->
         <div>
             <div class="chapter">
                 <h2>- Screenshots -</h2>
             </div>
-            <!-- swiper -->
+            <div class="text">
+                <p>Primary feature for version 1.0.3.</p>
+            </div>
             <script src="js/swiper-bundle.min.js"></script>
             <div class="slide no-select">
-                <div class="swiper">
+                <div class="swiper swiper-1">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="res/dungeon/01.png" alt="screenshot"></div>
                         <div class="swiper-slide"><img src="res/dungeon/02.png" alt="screenshot"></div>
@@ -59,15 +63,43 @@
                         <div class="swiper-slide"><img src="res/dungeon/04.png" alt="screenshot"></div>
                         <div class="swiper-slide"><img src="res/dungeon/05.png" alt="screenshot"></div>
                     </div>
-
                     <div class="swiper-pagination"></div>
-
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-
                 <script>
-                    var mySwiper = new Swiper('.swiper', {
+                    var mySwiper = new Swiper('.swiper-1', {
+                        direction: 'horizontal',
+                        loop: true,
+
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    })
+                </script>
+            </div>
+
+            <div class="text">
+                <p>Special Edition for Christmas! More weapons! More enemies! More surprise!</p>
+            </div>
+            <div class="slide no-select">
+                <div class="swiper swiper-2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="res/dungeon/2-01.png" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/2-02.gif" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/2-03.gif" alt="screenshot"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <script>
+                    var mySwiper = new Swiper('.swiper-2', {
                         direction: 'horizontal',
                         loop: true,
 
@@ -100,9 +132,41 @@
 
         <!-- Version -->
         <div>
+            <!-- v1.0.3 Xmas -->
             <div class="chapter">
                 <h2>- Version -</h2>
             </div>
+            <div class="section">
+                <h3>v1.0.3 Xmas</h3>
+            </div>
+            <div class="part">
+                <h4>Overview:</h4>
+            </div>
+            <div class="text">
+                <p>Added many fancy elements.</p>
+            </div>
+            <div class="text">
+                <p>Improved visual experience.</p>
+            </div>
+            <div class="text">
+                <p>Enhanced game engine for better UI.</p>
+            </div>
+            <div class="text">
+                <p>Reduced the number of levels in each chapter.</p>
+            </div>
+            <div class="text">
+                <p>Some adjustments to game balance.</p>
+            </div>
+            <div class="text">
+                <p>Fixed some hidden bugs.</p>
+            </div>
+            <div class="part">
+                <h4>Bugs:</h4>
+            </div>
+            <div class="text">
+                <p>Close the game through close button of Windows frame is not recommended.</p>
+            </div>
+            <hr>
             <!-- v1.0.3 -->
             <div class="section">
                 <h3>v1.0.3</h3>
@@ -119,6 +183,7 @@
             <div class="text">
                 <p>Still, may crash for unknown reason. (Too rare.)</p>
             </div>
+            <hr>
             <!-- v1.0.2 -->
             <div class="section">
                 <h3>v1.0.2</h3>
@@ -136,6 +201,7 @@
             <div class="text">
                 <p>Unknown.</p>
             </div>
+            <hr>
             <!-- v1.0.1 -->
             <div class="section">
                 <h3>v1.0.1</h3>
@@ -156,6 +222,7 @@
             <div class="text">
                 <p>Unknown.</p>
             </div>
+            <hr>
             <!-- v1.0.0 -->
             <div class="section">
                 <h3>v1.0.0</h3>
@@ -175,6 +242,7 @@
                 <p>1. Enemies may be a little stupid.</p>
                 <p>2. Weapon state may be skipped by swiching.</p>
             </div>
+            <hr>
             <!-- v0.1.0 -->
             <div class="section">
                 <h3>v0.1.0</h3>

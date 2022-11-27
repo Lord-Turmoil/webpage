@@ -1,0 +1,35 @@
+.download {
+    width: 100%;
+}
+
+.download .item {
+    height: 32px;
+    padding: 0 4px;
+    line-height: 32px;
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+.download .item:hover {
+    background-color: rgba(33, 149, 243, 0.5);
+}
+
+.download .item>a {
+    float: left;
+    width: 50%;
+    color: darkblue;
+}
+
+.download .item span {
+    float: right;
+}
+
+.download .item .extra {
+    text-align: center;
+}
+
+.download .item .extra a {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}

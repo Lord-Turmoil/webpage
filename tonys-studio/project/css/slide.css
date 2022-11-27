@@ -1,9 +1,9 @@
 .slide {
     text-align: center;
+    width: 100%;
 }
 
 .swiper {
-    margin-top: 30px;
     width: 500px;
     height: 250px;
     text-align: center;
