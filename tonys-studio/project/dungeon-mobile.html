@@ -10,6 +10,7 @@
 
     <link rel="icon" href="res/logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/snow.css">
     <style>
         .slide {
             text-align: center;
@@ -28,10 +29,16 @@
         p {
             text-indent: 2ch;
         }
+        
+        body {
+            background-color: lightblue;
+        }
     </style>
 </head>
 
 <body>
+    <div class="back"></div>
+
     <header class="header" id="top">
         <h1>Dungeon</h1>
     </header>
@@ -93,6 +100,7 @@
                         <div class="swiper-slide"><img src="res/dungeon/2-01.png" alt="screenshot"></div>
                         <div class="swiper-slide"><img src="res/dungeon/2-02.gif" alt="screenshot"></div>
                         <div class="swiper-slide"><img src="res/dungeon/2-03.gif" alt="screenshot"></div>
+                        <div class="swiper-slide"><img src="res/dungeon/2-04.png" alt="screenshot"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
@@ -283,6 +291,13 @@
     </footer>
     <script src="js/restrict.js">
     </script>
+
+    <!-- Extra snow. -->
+    <div class="snow-container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="http://www.lmlblog.com/winter/templets/xq/js/snowy.js"></script>
 </body>
 
 </html>
