@@ -9,6 +9,7 @@
 var success = false;
 var steps;
 var dfsOutput = document.getElementById("dfs-steps");
+var dfsStarOutput = document.getElementById("dfs-star-steps");
 var bfsOutput = document.getElementById("bfs-steps");
 var astarOutput = document.getElementById("astar-steps");
 var greedyOutput = document.getElementById("greedy-steps")
@@ -80,6 +81,81 @@ const dfs_solve = async () => {
 
     hookSolveEvent();
 }
+
+/*********** DFS* **********/
+const dfs_star_sol = async (u, dest, flag) => {
+    if (u == dest) {
+        success = true;
+        return;
+    }
+
+    var list = maze.matrix[u];
+    var order;
+    steps++;
+    dfsStarOutput.innerHTML = steps;
+
+    flag[u] = true;
+
+    if (list.length == 4) {
+        order = [2, 3, 0, 1];
+    } else {
+        order = [2, 0, 1];
+    }
+
+    for (var i = 0; (i < list.length) && !success; i++) {
+        var e = list[order[i]];
+        if (maze.getEdgeTag(e.id) == EDGE_NONE) {
+            continue;
+        }
+        if (flag[e.v]) {
+            continue;
+        }
+
+        await sleep(solSpeed);
+        renderer.draw();
+
+        maze.modifyEdge(e.id, EDGE_PATH);
+        await dfs_star_sol(e.v, dest, flag);
+        if (!success) {
+            maze.modifyEdge(e.id, EDGE_DEAD);
+        }
+    }
+    await sleep(solSpeed);
+    renderer.draw();
+
+    flag[u] = false;
+}
+
+const dfs_star_solve = async () => {
+    if (maze === null) {
+        console.log("Maze is null.");
+        hookSolveEvent();
+        return;
+    }
+
+    if (!maze.ready) {
+        console.log("Maze not ready.");
+        hookSolveEvent();
+        return;
+    }
+
+    maze.reset();
+    success = false;
+    steps = 0;
+    dfsStarOutput.innerHTML = steps;
+
+    var n = maze.size;
+    var flag = [true];
+
+    for (var i = 1; i <= n; i++) {
+        flag.push(false);
+    }
+
+    await dfs_star_sol(1, n, flag);
+
+    hookSolveEvent();
+}
+
 
 /********** BFS ***********/
 const bfs_solve = async () => {

@@ -28,7 +28,8 @@
     <hr>
 
     <div class="nav">
-        <p><i> Visit <a href="http://www.tonys-studio.top" target="_blank">Tony's Studio</a> for more fancy projects! :)</i></p>
+        <p><i> Visit <a href="http://www.tonys-studio.top" target="_blank">Tony's Studio</a> for more fancy projects!
+                :)</i></p>
     </div>
 
     <!-- Main Contents -->
@@ -115,6 +116,7 @@
                             <span>Method:</span>
                             <select id="solver">
                                 <option value="dfs">DFS</option>
+                                <option value="dfs-star">DFS*</option>
                                 <option value="bfs">BFS</option>
                                 <option value="astar">A*</option>
                                 <option value="greedy">Greedy</option>
@@ -140,6 +142,12 @@
                         </div>
                         <div class="entry">
                             <span>Steps:</span><b><span id="dfs-steps">0</span></b>
+                        </div>
+                        <div class="section">
+                            <h4>DFS*</h4>
+                        </div>
+                        <div class="entry">
+                            <span>Steps:</span><b><span id="dfs-star-steps">0</span></b>
                         </div>
                         <div class="section">
                             <h4>BFS</h4>
@@ -178,9 +186,8 @@
             <div class="text">
                 <p>This site is for simple demostrations of some basic graph algorithms by applying them on maze.
                     Currently, it can generate maze using <b>Prim</b>, <b>Kruskal</b> or <b>DFS</b> algorithms, and
-                    solve it using <b>DFS</b>,
-                    <b>BFS</b>, <b>A*</b> or <b>Greedy</b> algorithms. However, since I'm not very good at JavaScript,
-                    so the implementation is rather clumsy.
+                    solve it using <b>DFS</b>, <b>DFS*</b>, <b>BFS</b>, <b>A*</b> or <b>Greedy</b> algorithms. However,
+                    since I'm not very good at JavaScript, so the implementation is rather clumsy.
                 </p>
             </div>
             <div class="section">
@@ -208,21 +215,24 @@
                 </p>
             </div>
             <div class="text">
-                <p>To find the pathway, we now provide four basic algorithms. For <b>DFS</b> and <b>BFS</b>, there is
+                <p>To find the pathway, we now provide five algorithms. For <b>DFS</b> and <b>BFS</b>, there is
                     nothing special, and the efficiency of these two are even, I think. Since DFS can get deeper quickly
                     while BFS can reach more possible solutions, they are good at maze with different structures. For
-                    <b>A*</b>, it can be regarded as enhanced BFS, since it will make choices when choosing next
-                    candidate. Here, the heuristic function is the Manhattan distance to the exit of the maze. And for
-                    <b>Greedy</b>, it can also be regarded as enhanced BFS, and is actually very similar to A*, but it
-                    doesn't count for the taken steps, it only consider the distance to the exit, which makes it
-                    extremely fast in mazes that has a smooth pathway that is close to a line.
+                    <b>DFS*</b>, it optimize DFS to go right and down first, according the the position relation with
+                    the starting and ending point. For <b>A*</b>, it can be regarded as enhanced BFS, since it will make
+                    choices when choosing next candidate. Here, the heuristic function is the Manhattan distance to the
+                    exit of the maze. And for <b>Greedy</b>, it can also be regarded as enhanced BFS, and is actually
+                    very similar to A*, but it doesn't count for the taken steps, it only consider the distance to the
+                    exit, which makes it extremely fast in mazes that has a smooth pathway that is close to a line.
                 </p>
             </div>
             <div class="text">
-                <p>Generally speaking, DFS and BFS are even, while A* and Greedy are better than them in most cases. And
-                    usually Greedy algorithm seems to be more efficiency than A*. However, if the maze unfortunately got
-                    a devious solution, A* and Greedy might take longer as their evaluation function will mis-lead them
-                    to unexpected dead-ends.</p>
+                <p>Generally speaking, DFS and BFS are even, while DFS*, A* and Greedy are better than them in most
+                    cases. However, A* may took more steps since it considers the steps in the past, which plays an
+                    essential role in finding the shortest path, not here. So, usually Greedy algorithm seems to be the
+                    most efficient, and DFS* is not that bad, at least compared with its brother. However, if
+                    the maze unfortunately got a devious solution, A* and Greedy might take longer as their evaluation
+                    function will mis-lead them to unexpected dead-ends.</p>
             </div>
             <div class="section">
                 <h3>Notice</h3>

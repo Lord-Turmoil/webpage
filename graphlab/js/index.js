@@ -36,6 +36,8 @@ function onSlove() {
 
     if (solver == "dfs") {
         dfs_solve();
+    } else if (solver == "dfs-star") {
+        dfs_star_solve();
     } else if (solver == "bfs") {
         bfs_solve();
     } else if (solver == "astar") {
