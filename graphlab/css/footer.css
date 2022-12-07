@@ -1,0 +1,9 @@
+footer {
+    padding: 5px;
+    line-height: 3ch;
+    text-align: center;
+}
+
+footer img {
+    vertical-align: middle;
+}

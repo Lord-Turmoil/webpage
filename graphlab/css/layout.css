@@ -1,0 +1,137 @@
+.nav {
+    width: 80%;
+    margin: 6px auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 1080px;
+    margin: 10px auto;
+}
+
+.wrapper .graph-wrapper {
+    align-self: center;
+    width: 480px;
+    height: 480px;
+    margin: 20px;
+}
+
+.wrapper .ctrl-wrapper {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    margin: 16px;
+    padding: 4px;
+}
+
+.wrapper .ctrl-wrapper .generate-wrapper {
+    padding: 10px;
+    margin-bottom: 5px;
+    flex: auto;
+}
+
+.wrapper .ctrl-wrapper .solve-wrapper {
+    padding: 10px;
+    margin-top: 5px;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .ctrl-wrapper .ctrl-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrapper .ctrl-wrapper .ctrl-title-wrapper .ctrl-title {
+    align-self: center;
+    height: 32px;
+}
+
+.wrapper .ctrl-wrapper .ctrl-title-wrapper .ctrl-title h3 {
+    font-size: 26px;
+}
+
+.wrapper .ctrl-wrapper .ctrl-title-wrapper .ctrl-but {
+    align-self: center;
+}
+
+.wrapper .ctrl-wrapper .ctrl-title-wrapper .ctrl-but button {
+    padding: 2px 8px;
+    font-weight: bold;
+}
+
+.wrapper .ctrl-wrapper .ctrl-box {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    width: 100%;
+}
+
+.wrapper .ctrl-wrapper .ctrl-box .ctrl-item {
+    position: relative;
+    flex: 1;
+    margin: 6px;
+    padding: 10px 0 10px 10px;
+    border-radius: 10px;
+    background-color: lightsalmon;
+}
+
+.wrapper .ctrl-wrapper .ctrl-box .ctrl-item .section {
+    margin-top: 5px;
+}
+
+.wrapper .ctrl-wrapper .ctrl-box .ctrl-item .entry {
+    width: 95%;
+    margin: 6px;
+}
+
+.wrapper .ctrl-wrapper .ctrl-box .ctrl-item .entry span {
+    display: inline-block;
+    width: 45%;
+}
+
+.wrapper .ctrl-wrapper .ctrl-box .ctrl-item .entry input,
+.wrapper .ctrl-wrapper .ctrl-box .ctrl-item .entry select {
+    display: inline-block;
+    width: 45%;
+    margin: 0 2%;
+}
+
+/*  */
+
+.wrapper .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper .text-wrapper .title {
+    text-align: center;
+    margin: 5px;
+}
+
+.wrapper .text-wrapper .title h2 {
+    font-size: 28px;
+}
+
+.wrapper .text-wrapper .section {
+    margin: 5px;
+}
+
+.wrapper .text-wrapper .section h3 {
+    font-size: 24px;
+}
+
+.wrapper .text-wrapper .text {
+    margin-bottom: 5px;
+    text-indent: 2ch;
+    font-size: 20px;
+    text-align: justify;
+}

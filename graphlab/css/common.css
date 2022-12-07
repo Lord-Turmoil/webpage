@@ -1,0 +1,31 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    text-align: center;
+    padding: 0.5em;
+}
+
+.clearfix:before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.banner marquee {
+    line-height: 3ch;
+}

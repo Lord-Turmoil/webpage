@@ -2,7 +2,7 @@
     var footer = document.getElementsByClassName('footer')[0];
     var str = '<div class="links"><h4>My Links</h4><ul></ul></div>'
     footer.innerHTML += str;
-    str = '<div class="copyright"><span>Copyright &copy; Tony\'s Studio 2022 </span></div><div class="record"><span><a href="https://beian.miit.gov.cn" target="_blank">晋ICP备2022002858号-1</a></span><span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14080202000495"><img src="res/img/record.png">晋公网安备 14080202000495号</a></span></div>';
+    str = '<div class="copyright"><span>Copyright &copy; Tony\'s Studio 2020 - 2023 </span></div><div class="record"><span><a href="https://beian.miit.gov.cn" target="_blank">晋ICP备2022002858号-1</a></span><span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14080202000495"><img src="res/img/record.png">晋公网安备 14080202000495号</a></span></div>';
     footer.innerHTML += str;
     str = '<div id="time"></div>'
     footer.innerHTML += str;

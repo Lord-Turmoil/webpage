@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Lab</title>
+    <link rel="icon" href="res/maze.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/decoration.css">
+</head>
+
+<body>
+    <header>
+        <h1>Graph Laboratory</h1>
+    </header>
+    <hr>
+
+    <div class="banner">
+        <marquee behavior="scroll" direction="left">
+            <p>Welcome to Tony's Graph Laboratory!</p>
+        </marquee>
+    </div>
+
+    <hr>
+
+    <div class="nav">
+        <p><i> Visit <a href="http://www.tonys-studio.top" target="_blank">Tony's Studio</a> for more fancy projects! :)</i></p>
+    </div>
+
+    <!-- Main Contents -->
+    <div class="wrapper lightblue">
+        <!-- For the canvas, huh -->
+        <div class="graph-wrapper">
+            <canvas width="480" height="480" id="maze"></canvas>
+        </div>
+        <!-- For the control, duh -->
+        <div class="ctrl-wrapper">
+            <div class="generate-wrapper">
+                <div class="ctrl-title-wrapper">
+                    <div class="ctrl-title">
+                        <h3>Generate Maze</h3>
+                    </div>
+                    <div class="ctrl-but">
+                        <button id="random">Random</button>
+                    </div>
+                    <div class="ctrl-but">
+                        <button id="generate">Generate</button>
+                    </div>
+                </div>
+                <div class="ctrl-box">
+                    <div class="ctrl-item">
+                        <div class="section">
+                            <h4>Color</h4>
+                        </div>
+                        <div class="entry">
+                            <span>Wall:</span><input id="wall-color" type="color" value="#333333">
+                        </div>
+                        <div class="entry">
+                            <span>Floor:</span><input id="floor-color" type="color" value="#efefef">
+                        </div>
+                        <div class="entry">
+                            <span>Src:</span><input id="src-color" type="color" value="#00ff00">
+                        </div>
+                        <div class="entry">
+                            <span>Dest:</span><input id="dest-color" type="color" value="#ff0000">
+                        </div>
+                    </div>
+                    <div class="ctrl-item">
+                        <div class="section">
+                            <h4>Size</h4>
+                        </div>
+                        <div class="entry">
+                            <span>Width(3-48):</span><input id="width" type="number">
+                        </div>
+                        <div class="entry">
+                            <span>Height(3-48):</span><input id="height" type="number">
+                        </div>
+                        <div class="section">
+                            <h4>Algorithm</h4>
+                        </div>
+                        <div class="entry">
+                            <span>Method:</span>
+                            <select id="generator">
+                                <option value="prim">Prim</option>
+                                <option value="kruskal">Kruskal</option>
+                                <option value="dfs">DFS</option>
+                            </select>
+                        </div>
+                        <div class="entry">
+                            <span>Speed:</span>
+                            <input id="gen-speed" type="range">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="solve-wrapper">
+                <div class="ctrl-title-wrapper">
+                    <div class="ctrl-title">
+                        <h3>Solve Maze</h3>
+                    </div>
+                    <div class="ctrl-but">
+                        <button id="solve">Solve</button>
+                    </div>
+                </div>
+                <div class="ctrl-box">
+                    <div class="ctrl-item">
+                        <div class="section">
+                            <h4>Algorithm</h4>
+                        </div>
+                        <div class="entry">
+                            <span>Method:</span>
+                            <select id="solver">
+                                <option value="dfs">DFS</option>
+                                <option value="bfs">BFS</option>
+                                <option value="astar">A*</option>
+                                <option value="greedy">Greedy</option>
+                            </select>
+                        </div>
+                        <div class="entry">
+                            <span>Speed:</span>
+                            <input id="sol-speed" type="range">
+                        </div>
+                        <div class="section">
+                            <h4>Color</h4>
+                        </div>
+                        <div class="entry">
+                            <span>Path:</span><input id="path-color" type="color" value="#00cc00">
+                        </div>
+                        <div class="entry">
+                            <span>Dead:</span><input id="dead-color" type="color" value="#9f9f9f">
+                        </div>
+                    </div>
+                    <div class="ctrl-item">
+                        <div class="section">
+                            <h4>DFS</h4>
+                        </div>
+                        <div class="entry">
+                            <span>Steps:</span><b><span id="dfs-steps">0</span></b>
+                        </div>
+                        <div class="section">
+                            <h4>BFS</h4>
+                        </div>
+                        <div class="entry">
+                            <span>Steps:</span><b><span id="bfs-steps">0</span></b>
+                        </div>
+                        <div class="section">
+                            <h4>A*</h4>
+                        </div>
+                        <div class="entry">
+                            <span>Steps:</span><b><span id="astar-steps">0</span></b>
+                        </div>
+                        <div class="section">
+                            <h4>Greedy</h4>
+                        </div>
+                        <div class="entry">
+                            <span>Steps:</span><b><span id="greedy-steps">0</span></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <!-- Description Contents -->
+    <div class="wrapper">
+        <div class="text-wrapper">
+            <div class="title">
+                <h2>Description</h2>
+            </div>
+            <div class="section">
+                <h3>General</h3>
+            </div>
+            <div class="text">
+                <p>This site is for simple demostrations of some basic graph algorithms by applying them on maze.
+                    Currently, it can generate maze using <b>Prim</b>, <b>Kruskal</b> or <b>DFS</b> algorithms, and
+                    solve it using <b>DFS</b>,
+                    <b>BFS</b>, <b>A*</b> or <b>Greedy</b> algorithms. However, since I'm not very good at JavaScript,
+                    so the implementation is rather clumsy.
+                </p>
+            </div>
+            <div class="section">
+                <h3>Tutorial</h3>
+            </div>
+            <div class="text">
+                <p>To generate the maze, just select the size and the color of the map, or just click "Random" button to
+                    pick one randomly. And don't forget the algorithm you want. Then, click "Generate" and the maze will
+                    be generated step by step. You can also adjust the speed slider to accelerate or decelerate. The
+                    same thing goes with solving the maze. What's more, the steps of each method will be shown on the
+                    right. So, have fun! :)
+                </p>
+            </div>
+            <div class="section">
+                <h3>Algorithms</h3>
+            </div>
+            <div class="text">
+                <p>For map generation, the algorithms will <b>not create any loop</b>. That is to say, the entire maze
+                    is actually a <b>tree</b>. For Prim and Kruskal, they are originally algorithms for
+                    minimum-spanning-tree, so we can just assign random weight to the edges in the graph to create a
+                    random tree. As for me, I think the results of these two methods are quite similar. The only slight
+                    difference might be that the tree of Prim may have a more obvious root, which is the starting point.
+                    However, for DFS algorithm, the result is quite different. The solution for the maze that generated
+                    by DFS is often <b>devious</b>, unlike the other two whose result is relatively smooth.
+                </p>
+            </div>
+            <div class="text">
+                <p>To find the pathway, we now provide for basic algorithms. For <b>DFS</b> and <b>BFS</b>, there is
+                    nothing special, and the efficiency of these two are even, I think. Since DFS can get deeper quickly
+                    while BFS can reach more possible solutions, they are good at maze with different structures. For
+                    <b>A*</b>, it can be regarded as enhanced BFS, since it will make choices when choosing next
+                    candidate. Here, the heuristic function is the Manhattan distance to the exit of the maze. And for
+                    <b>Greedy</b>, it can also be regarded as enhanced BFS, and is actually very similar to A*, but it
+                    doesn't count for the taken steps, it only consider the distance to the exit, which makes it
+                    extremely fast in mazes that has a smooth pathway that is close to a line.
+                </p>
+            </div>
+            <div class="text">
+                <p>Generally speaking, DFS and BFS are even, while A* and Greedy are better than them in most cases. And
+                    usually Greedy algorithm seems to be more efficiency than A*. However, if the maze unfortunately got
+                    a devious solution, A* and Greedy might take longer as ther evaluation function will mis-lead them
+                    to unexpected dead-ends.</p>
+            </div>
+            <div class="section">
+                <h3>Notice</h3>
+            </div>
+            <div class="text">
+                <p>Since the code is not perfect, there are some flaws in it. Please be patient when generating and
+                    solving the maze. Generate maze when solving is not complete will trigger an serious error.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+    <footer class="clearfix">
+        <div class="copyright">
+            <span>Copyright © Tony's Studio 2020 - 2023</span>
+        </div>
+    </footer>
+
+    <script src="js/utility.js"></script>
+    <script src="js/params.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/maze.js"></script>
+    <script src="js/generator.js"></script>
+    <script src="js/solver.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
