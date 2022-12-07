@@ -1,6 +1,7 @@
 var linkList = [
     '<li><a href="http://www.tonys-studio.top:81" target="_blank">Logic Calculator</a></li>',
-    '<li><a href="http://www.tonys-studio.top:83" target="_blank">Metronome</a></li>'
+    '<li><a href="http://www.tonys-studio.top:83" target="_blank">Metronome</a></li>',
+    '<li><a href="http://www.tonys-studio.top:84" target="_blank">GraphLab</a></li>'
 ];
 
 // '<li><a href="http://www.tonys-studio.top:90/" target="_blank">Genesis</a></li>'
