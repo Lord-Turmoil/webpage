@@ -1,21 +1,13 @@
 /**
- * Solve maze.
+ * Solve maze without delay.
  * Methods provided:
  *      DFS
  *      BFS
  *      AStar
  */
 
-var success = false;
-var steps;
-var dfsOutput = document.getElementById("dfs-steps");
-var dfsStarOutput = document.getElementById("dfs-star-steps");
-var bfsOutput = document.getElementById("bfs-steps");
-var astarOutput = document.getElementById("astar-steps");
-var greedyOutput = document.getElementById("greedy-steps");
-
 /*********** DFS **********/
-const dfs_sol = async (u, dest, flag) => {
+function dfs_sol_b(u, dest, flag) {
     if (u == dest) {
         success = true;
         return;
@@ -37,22 +29,17 @@ const dfs_sol = async (u, dest, flag) => {
             continue;
         }
 
-        await sleep(solSpeed);
-        renderer.draw();
-
         maze.modifyEdge(e.id, EDGE_PATH);
-        await dfs_sol(e.v, dest, flag);
+        dfs_sol_b(e.v, dest, flag);
         if (!success) {
             maze.modifyEdge(e.id, EDGE_DEAD);
         }
     }
-    await sleep(solSpeed);
-    renderer.draw();
 
     flag[u] = false;
 }
 
-const dfs_solve = async () => {
+function dfs_solve_b() {
     if (maze === null) {
         console.log("Maze is null.");
         hookSolveEvent();
@@ -77,13 +64,15 @@ const dfs_solve = async () => {
         flag.push(false);
     }
 
-    await dfs_sol(1, n, flag);
+    dfs_sol_b(1, n, flag);
+
+    renderer.draw();
 
     hookSolveEvent();
 }
 
 /*********** DFS* **********/
-const dfs_star_sol = async (u, dest, flag) => {
+function dfs_star_sol_b(u, dest, flag) {
     if (u == dest) {
         success = true;
         return;
@@ -111,22 +100,18 @@ const dfs_star_sol = async (u, dest, flag) => {
             continue;
         }
 
-        await sleep(solSpeed);
-        renderer.draw();
-
         maze.modifyEdge(e.id, EDGE_PATH);
-        await dfs_star_sol(e.v, dest, flag);
+
+        dfs_star_sol_b(e.v, dest, flag);
         if (!success) {
             maze.modifyEdge(e.id, EDGE_DEAD);
         }
     }
-    await sleep(solSpeed);
-    renderer.draw();
 
     flag[u] = false;
 }
 
-const dfs_star_solve = async () => {
+function dfs_star_solve_b() {
     if (maze === null) {
         console.log("Maze is null.");
         hookSolveEvent();
@@ -151,14 +136,16 @@ const dfs_star_solve = async () => {
         flag.push(false);
     }
 
-    await dfs_star_sol(1, n, flag);
+    dfs_star_sol_b(1, n, flag);
+
+    renderer.draw();
 
     hookSolveEvent();
 }
 
 
 /********** BFS ***********/
-const bfs_solve = async () => {
+function bfs_solve_b() {
     if (maze === null) {
         console.log("Maze is null.");
         hookSolveEvent();
@@ -194,9 +181,6 @@ const bfs_solve = async () => {
 
         var u = candidates[0];
 
-        await sleep(solSpeed);
-        renderer.draw();
-
         candidates.shift();
         var list = maze.matrix[u];
         for (var i = 0; (i < list.length) && !success; i++) {
@@ -231,23 +215,15 @@ const bfs_solve = async () => {
             }
         }
         u = parent[u];
-
-        await sleep(solSpeed);
-        renderer.draw();
     }
+    
+    renderer.draw();
 
     hookSolveEvent();
 }
 
 /********** AStar **********/
-class Pair {
-    constructor(u, w) {
-        this.u = u;
-        this.w = w;
-    }
-}
-
-const astar_solve = async (heuristic) => {
+function astar_solve_b(heuristic) {
     if (maze === null) {
         console.log("Maze is null.");
         hookSolveEvent();
@@ -305,9 +281,6 @@ const astar_solve = async (heuristic) => {
         var x1 = Math.floor((u - 1) % width);
         var y1 = Math.floor((u - 1) / width);
 
-        await sleep(solSpeed);
-        renderer.draw();
-
         for (var i = 0; i < list.length; i++) {
             var e = list[i];
             if (maze.getEdgeTag(e.id) == EDGE_NONE) {
@@ -343,16 +316,15 @@ const astar_solve = async (heuristic) => {
             }
         }
         u = parent[u];
-
-        await sleep(solSpeed);
-        renderer.draw();
     }
+
+    renderer.draw();
 
     hookSolveEvent();
 }
 
 /********** Greedy **********/
-const greedy_solve = async () => {
+function greedy_solve_b() {
     if (maze === null) {
         console.log("Maze is null.");
         hookSolveEvent();
@@ -404,9 +376,6 @@ const greedy_solve = async () => {
         steps++;
         greedyOutput.innerHTML = steps;
 
-        await sleep(solSpeed);
-        renderer.draw();
-
         for (var i = 0; i < list.length; i++) {
             var e = list[i];
             if (maze.getEdgeTag(e.id) == EDGE_NONE) {
@@ -444,10 +413,9 @@ const greedy_solve = async () => {
             }
         }
         u = parent[u];
-
-        await sleep(solSpeed);
-        renderer.draw();
     }
+
+    renderer.draw();
 
     hookSolveEvent();
 }

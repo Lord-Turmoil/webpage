@@ -36,6 +36,9 @@ var solSpeedInput = document.getElementById("sol-speed");
 var solver = solverInput.value;
 var solSpeed = parseFloat(solSpeedInput.value)
 
+var batchTimeInput = document.getElementById("sol-time");
+var batchTime = 1;
+
 function onChangeWidth(w) {
     if (isNaN(w) || (w < MIN_SIZE || w > MAX_SIZE)) {
         w = PREFERRED_SIZE;
@@ -67,6 +70,14 @@ function onChangeGenSpeed(s) {
 function onChangeSolSpeed(s) {
     solSpeed = s;
     console.log("Solve Speed: " + solSpeed)
+}
+
+function onChangeBatchTime(t) {
+    if (isNaN(t) || (t <= 0)) {
+        t = 1;
+        batchTimeInput.value = t;
+    }
+    batchTime = t;
 }
 
 (function () {
@@ -113,4 +124,9 @@ function onChangeSolSpeed(s) {
     solSpeedInput.onchange = function() {
         onChangeSolSpeed(parseInt(solSpeedInput.value));
     }
+
+    batchTimeInput.onchange = function() {
+        onChangeBatchTime(parseInt(batchTimeInput.value));
+    }
+    onChangeBatchTime(-1);
 })();

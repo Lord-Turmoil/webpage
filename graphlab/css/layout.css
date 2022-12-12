@@ -57,6 +57,15 @@
     font-size: 26px;
 }
 
+.wrapper .ctrl-wrapper .ctrl-title-wrapper .ctrl-input {
+    align-self: center;
+    width: min-content;
+}
+
+.wrapper .ctrl-wrapper .ctrl-title-wrapper .ctrl-input input {
+    width: min-content;
+}
+
 .wrapper .ctrl-wrapper .ctrl-title-wrapper .ctrl-but {
     align-self: center;
 }
