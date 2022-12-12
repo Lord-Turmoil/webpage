@@ -116,11 +116,11 @@ function onSolveBatch() {
         greedyCnt += steps;
     }
 
-    dfsCnt = Math.ceil(dfsCnt);
-    dfsStarCnt = Math.ceil(dfsStarCnt);
-    bfsCnt = Math.ceil(bfsCnt);
-    astarCnt = Math.ceil(astarCnt);
-    greedyCnt = Math.ceil(greedyCnt);
+    dfsCnt = Math.ceil(dfsCnt / batchTime);
+    dfsStarCnt = Math.ceil(dfsStarCnt / batchTime);
+    bfsCnt = Math.ceil(bfsCnt / batchTime);
+    astarCnt = Math.ceil(astarCnt / batchTime);
+    greedyCnt = Math.ceil(greedyCnt / batchTime);
 
     dfsOutput.innerHTML = "AVG: " + dfsCnt;
     dfsStarOutput.innerHTML = "AVG: " + dfsStarCnt;
@@ -144,7 +144,7 @@ function hookBatchEvent() {
     solBatchBut.onclick = function () {
         onSolveBatch();
     }
-    resetBut.onclick = function() {
+    resetBut.onclick = function () {
         onReset();
     }
 }
