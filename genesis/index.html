@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENESIS</title>
+    <link rel="icon" href="res/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/background.css">
+    <script src="js/detectmobilebrowser.js"></script>
+    <script>
+        if (check())
+            document.write('<link rel="stylesheet" href="css/layout.css">');
+        else
+            document.write('<link rel="stylesheet" href="css/mobile.css">');
+    </script>
+    <style>
+         @font-face {
+            font-family: 'Harlow Solid';
+            src: url("res/HARLOWSI.TTF");
+        }
+    </style>
+</head>
+
+<body class="no-select">
+    <div class="header">
+        <span>==  G E N E S I S  ==</span>
+    </div>
+    <hr>
+
+    <!-- content -->
+    <div class="content">
+        <div class="float right top">
+            <button id="dark-but"><img src="res/img/music.png" alt="music"></button>
+        </div>
+
+        <!-- days -->
+        <div class="day">
+            <div class="elapse"><span id="days" class="time"></span><span class="unit">&nbsp;Days</span></div>
+            <div class="origin">Since February 10, 2023</div>
+        </div>
+
+        <div class="float left bottom">
+            <button id="light-but"><img src="res/img/music.png" alt="music"></button>
+        </div>
+    </div>
+
+    <!-- bgms -->
+    <audio src="res/audio/light.m4a" loop id="light-bgm"></audio>
+    <audio src="res/audio/dark.mp3" loop id="dark-bgm"></audio>
+
+    <!-- footer -->
+    <hr>
+    <div class="footer">
+        <!-- copyright -->
+        <div class="copyright">
+            <a href="http://www.tonys-studio.top" target="_blank"><span>Copyright &copy; Tony's Studio</span></a>
+        </div>
+    </div>
+
+    <script src="js/days.js"></script>
+    <script src="js/restrict.js"></script>
+    <script src="js/music.js"></script>
+</body>
+
+</html>
